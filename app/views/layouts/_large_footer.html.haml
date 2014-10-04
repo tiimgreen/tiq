@@ -1,0 +1,38 @@
+#footer-white
+  .container
+    .row
+      .col-sm-3.menu
+        %h3 Overview
+        %ul
+          %li= link_to 'Features', '#'
+          %li= link_to 'Services', '#'
+          %li= link_to 'Pricing', '#'
+          %li= link_to 'Support', '#'
+          %li= link_to 'Blog', '#'
+      .col-sm-3.menu
+        %h3 Menu
+        %ul
+          %li= link_to 'About us', '#'
+          %li= link_to 'Contact us', '#'
+      .col-sm-2.menu
+        %h3 Social
+        %ul
+          %li= link_to 'Facebook', '#'
+          %li= link_to 'Twitter', 'http://twitter.com'
+      .col-sm-4.newsletter
+        .signup.clearfix
+          %p
+            Sign up for the newsletter and we'll inform you of updates, offers and more.
+          %form
+            %input.form-control{name: "email", placeholder: "Your email address", type: "text"}/
+            %input{type: "submit", value: "Sign up"}/
+        = link_to '#' do
+          = image_tag 'social/fb.png'
+        = link_to 'http://twitter.com/kodets' do
+          = image_tag 'social/social-tw.png'
+    .row.credits
+      .col-md-12
+        Copyright &copy;
+        = succeed ',' do
+          = Time.now.year
+        Tiq.

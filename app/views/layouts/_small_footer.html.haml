@@ -1,0 +1,24 @@
+#footer
+  .container
+    .row
+      .col-sm-3.copyright
+        Copyright &copy;
+        = succeed ',' do
+          = Time.now.year
+        Tiq.
+      .col-sm-6.menu
+        %ul
+          = footer_link 'Courses', '#', 'courses', 'index'
+          - if current_user.teacher?
+            = footer_link 'Features', '#', 'pages', 'features'
+            = footer_link 'Pricing', '#', 'pages', 'pricing'
+            = footer_link 'Support', '#', 'pages', 'support'
+            = footer_link 'Blog', '#', 'blog', 'index'
+          - else
+            = footer_link 'My Account', '#', 'users', 'show'
+      - if current_user.teacher?
+        .col-sm-3.social
+          = link_to 'http://twitter.com/kodets' do
+            = image_tag 'social/social-tw.png', alt: 'twitter'
+          = link_to '#' do
+            = image_tag 'social/social-dbl.png', alt: 'dribbble'
