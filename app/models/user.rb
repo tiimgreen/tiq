@@ -11,4 +11,8 @@ class User < ActiveRecord::Base
                               on: :update
   validates :envato_username, presence: true,
                               uniqueness: { case_sensitive: false }
+
+  def name
+    "#{first_name} #{last_name}"
+  end
 end

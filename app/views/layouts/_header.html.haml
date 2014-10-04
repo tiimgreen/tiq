@@ -14,7 +14,7 @@
               %span.octicon.octicon-mortar-board
               Courses
           %li
-            = link_to '#' do
+            = link_to dashboard_path do
               %span.octicon.octicon-home
               Dashboard
           %li.dropdown
@@ -24,7 +24,7 @@
               %b.caret
             %ul.dropdown-menu
               %li
-                = link_to '#', method: :delete do
+                = link_to destroy_user_session_path, method: :delete do
                   %i.fa.fa-cog
                   Sign out
         - else

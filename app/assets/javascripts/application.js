@@ -1,3 +1,11 @@
 //= require jquery
 //= require jquery_ujs
+//= require bootstrap/bootstrap.min
+//= require vendor/imagesloaded
+//= require vendor/jquery.flexslider.min
+//= require vendor/jquery.isotope.min
+//= require vendor/jquery.validate.min
+//= require vendor/sketch.min
+//= require vendor/spectrum
+//= require theme
 //= require_tree .

@@ -9,6 +9,7 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'haml'
 gem 'devise'
+gem 'envato'
 
 gem 'jbuilder', '~> 2.0'
 
