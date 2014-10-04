@@ -1,4 +1,9 @@
 module ApplicationHelper
+  # Produces title for pages
+  def full_title(title, base = 'Tiq')
+    (title.empty? ? base : "#{title} | #{base}").html_safe
+  end
+
   # Short method for checking if on certain page
   def on_page(given_controller_name, given_action_name)
     controller.controller_name == given_controller_name &&
