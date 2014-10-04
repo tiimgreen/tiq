@@ -4,18 +4,24 @@
   .container
     .row
       .col-md-12
+        - if !current_user.api_key.present?
+          %div{class: "alert alert-info alert-dissmissable", role: 'alert'}
+            %button.close{'data-dismiss' => 'alert', type: 'button'}
+              %span{'aria-hidden' => 'true'} &times;
+              %span.sr-only Close
+            To integrate your account with envato,
+            = link_to 'click here.', edit_user_registration_path
+    .row
+      .col-md-12
+        - if @envato_user
+          .pull-right
+            %h5
+              Your sales this month are
+              - if @envato_user.earnings_and_sales_by_month['earnings-and-sales-by-month'].is_a? Array
+                %strong £0.00
+              - else
+                %strong= @envato_user.earnings_and_sales_by_month.inspect
         %h1
+          = image_tag @envato_user.account['account']['image'], class: 'pic'
           = current_user.name
           %small= current_user.envato_username
-    .row.stats
-      .col-sm-4
-        %strong 3
-        test
-      .col-sm-4
-        %strong 4
-        test
-      .col-sm-4
-        %strong #{'3'}
-        homework overdue
-
-= @envato_user.vitals.inspect

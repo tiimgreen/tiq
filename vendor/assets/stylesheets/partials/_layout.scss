@@ -583,3 +583,14 @@ a, button {
     }
   }
 }
+
+.pic {
+  width: 71px;
+  height: 71px;
+  border-radius: 50px;
+  float: left;
+  position: relative;
+  top: -12px;
+  margin-right: 18px;
+  border: 1px solid #ccc;
+}
