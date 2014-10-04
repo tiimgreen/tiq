@@ -6,9 +6,18 @@
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body class="<%= "#{controller.controller_name} #{controller.action_name}" %>">
+  <% flash.each do |key, value| %>
+    <div class="<%= "alert alert-#{key} alert-dissmissable" %>" role="alert">
+      <button class="close" data-dismiss="alert" type="button">
+        <span aria-hidden="true">&times;</span>
+        <span class="sr-only">Close</span>
+      </button>
+      <%= value %>
+    </div>
+  <% end %>
 
-<%= yield %>
-
+  <%= render 'layouts/header' %>
+  <%= yield %>
 </body>
 </html>

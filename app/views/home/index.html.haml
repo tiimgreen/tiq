@@ -1,1 +1,99 @@
-%h1 Test
+#hero
+  .container
+    %h1.hero-text.animated.fadeInDown
+      Interactive Programming
+      %br/
+      Lessons
+    %p.sub-text.animated.fadeInDown
+      Get a unlimited acces to 100's of professionally built programming lessons, videos, quizzes and competitions.
+    .cta.animated.fadeInDown
+      = link_to 'See the tour', '#', class: 'button-outline'
+      = link_to 'Sign up for a free trial', '#', class: 'button'
+    .img
+#features
+  .container
+    .row.header
+      .col-md-12
+        %h2 Autonomous, affordable, revolutionary.
+        %p Kodets is a subscription based, online platform designed for primary and secondary schools to assist in the teaching of Computing.
+    .row.feature
+      .col-md-6.info
+        %h4 Customise all lessons to your requirements
+        %p
+          With Kodets' custom built Lesson Editor you can easily change and update any lessons content or requirements.
+      .col-md-6.image
+        = image_tag 'feature1.png', class: 'img-responsive'
+    .divider
+    .row.feature.backwards
+      .col-md-6.info
+        %h4 A secure learning area for students to learn collaboratively.
+        %p
+          Kodets offers a fully featured learning environment with multiple social features to allows students to go through the learning process together.
+        %p
+          Leaderboards, groups, sharing code and collaborative competitions are just some of these features.
+      .col-md-6.image
+        = image_tag 'feature2.png', class: 'img-responsive'
+    .divider
+    .row.feature
+      .col-md-6.info
+        %h4 1,000's of lessons instantly available
+        %p Kodets provides an easy to use, hassle free interface to allow you to easily and quickly set homework or classwork tasks.
+      .col-md-6.image
+        = image_tag 'feature1.png', class: 'img-responsive'
+#slider
+  .container
+    .row
+      .col-md-12.slide-wrapper
+        .slideshow
+          .btn-nav.prev
+          .btn-nav.next
+          .slide.active
+            = image_tag 'slider/slide3.png'
+          .slide
+            = image_tag 'slider/slide4.png'
+          .slide
+            = image_tag 'slider/slide1.png'
+          .slide
+            = image_tag 'slider/slide5.png'
+          .slide
+            = image_tag 'slider/slide2.png'
+#testimonials
+  .container
+    .row.header
+      .col-md-12
+        %h3 Trusted by a lot businesses around the world:
+    .row
+      .col-sm-6
+        .testimonial.pull-right
+          .quote
+            I am just quoting some stuff but I am seriously happy about this product. Has a lot of powerful
+            features and is so easy to set up, I could stay customizing it day and night, it's just so much fun!
+            .arrow-down
+              .arrow
+              .arrow-border
+          .author
+            = image_tag 'testimonials/testimonial1.jpg', class: 'pic'
+            .name John McClane
+            .company Horsforth School
+      .col-sm-6
+        .testimonial
+          .quote
+            This thing is one of those tools that everybody should be using. I really like it and with this ease to use, you can kickstart your teachgin and apps and just focus on your students!
+            .arrow-down
+              .arrow
+              .arrow-border
+          .author
+            = image_tag 'testimonials/testimonial2.jpg', class: 'pic'
+            .name Karen Jones
+            .company Horsforth School
+#cta
+  %p
+    Start your free 14 day trial!
+  = link_to 'Sign up for free', '#'
+#clients
+  .container
+    .row
+      .col-md-12
+        %h3 Our Customers
+        %p
+          These are some of our customers who have helped us by using our product.
