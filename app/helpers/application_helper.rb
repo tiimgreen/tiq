@@ -27,4 +27,12 @@ module ApplicationHelper
   def large_footer?
     !user_signed_in?
   end
+
+  def footer_link(link_text, link, kontroller_name, aktion_name)
+    if on_page(kontroller_name, aktion_name)
+      "<li class='active'><a href='#{link}'>#{link_text}</a></li>".html_safe
+    else
+      "<li><a href='#{link}'>#{link_text}</a></li>".html_safe
+    end
+  end
 end

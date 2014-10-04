@@ -20,7 +20,7 @@
           %li.dropdown
             %a.dropdown-toggle{'href' => '#', 'data-toggle' => 'dropdown'}
               %i.fa.fa-user
-              = current_user.name
+              = "#{current_user.first_name} #{current_user.last_name}"
               %b.caret
             %ul.dropdown-menu
               %li
@@ -31,5 +31,5 @@
           %li= link_to 'Home', root_path
           %li= link_to 'Pricing', '#'
           %li= link_to 'Features', '#'
-          %li= link_to 'Register', '#'
+          %li= link_to 'Register', new_user_registration_path
           %li= link_to 'Sign in', new_user_session_path, class: 'button'
