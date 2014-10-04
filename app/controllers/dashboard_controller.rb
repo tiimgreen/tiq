@@ -1,6 +1,5 @@
 class DashboardController < ApplicationController
   def index
-    envato = Envato::Client.new
-    envato.user('rafalchmiel')
+    @envato_user = Envato::Client.new(current_user.envato_username, '7fnkgry2e17b7ooz7dgdlda6iwg9h6jr')
   end
 end

@@ -6,7 +6,7 @@
       .col-md-12
         %h1
           = current_user.name
-          Dashboard
+          %small= current_user.envato_username
     .row.stats
       .col-sm-4
         %strong 3
@@ -17,3 +17,5 @@
       .col-sm-4
         %strong #{'3'}
         homework overdue
+
+= @envato_user.vitals.inspect
